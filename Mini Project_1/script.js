@@ -87,8 +87,10 @@ transactionForm.addEventListener("submit", (e) => {
   const type = document.getElementById("type").value;
   const category = document.getElementById("category").value;
   const amount = Number.parseFloat(document.getElementById("amount").value);
+
   // Add the transaction
   const balance = manager.addTransaction(date, type, category, amount);
+
   // Update the table
   const transaction =
     manager.getTransactions()[manager.getTransactions().length - 1];
